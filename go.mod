@@ -1,4 +1,4 @@
-module github.com/chrisohaver/k8sapi
+module github.com/coredns/kubeapi
 
 go 1.17
 
