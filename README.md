@@ -38,4 +38,11 @@ chain of plugins.
 
 ## Examples
 
-TODO
+The _kubenodes_ plugin (https://github.com/infobloxopen/kubenodes) uses _kubeapi_ to connect to the Kubernetes API.
+
+```
+. {
+  kubeapi
+  kubenodes node.cluster.local in-addr.arpa ip6.arpa
+}
+```

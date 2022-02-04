@@ -43,5 +43,7 @@ func Client(config *dnsserver.Config) (kubernetes.Interface, error) {
 		}
 		return k.Client, nil
 	}
-	return nil, errors.New("kubeapi not registered in server block")
+	// Either the kubeapi plugin was not defined in the serverblock, or Client() was called
+	// before it had a chance to register itself.
+	return nil, errors.New("kubeapi plugin not registered in server block")
 }
